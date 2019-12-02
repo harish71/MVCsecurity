@@ -3,7 +3,9 @@ package com.slokam.hr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+//Changes by user 1
 // changes by user2
+
 @Service
 public class LoginService implements ILoginService {
 	@Autowired
