@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableGlobalMethodSecurity(securedEnabled = true,prePostEnabled = true)
 public class SecConfiguration extends WebSecurityConfigurerAdapter {
     //asdf asdfasdf
-	
+	// Hello we are working on branch b1.
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
 	
