@@ -17,7 +17,9 @@ public class Personal implements Serializable {
    @ManyToOne() 
 @JoinColumn(name="fkid12") 
    private MaritalStatus  maritalStatus;
+   
   private Date  marriageDate;
+  
    @ManyToOne() 
 @JoinColumn(name="fkid13") 
    private State  state;
@@ -27,6 +29,8 @@ public class Personal implements Serializable {
    @ManyToOne() 
 @JoinColumn(name="fkid15") 
    private Country  nationality;
+   
+   
 public Integer getId() {
 		return id;
 	}

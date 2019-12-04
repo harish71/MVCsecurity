@@ -10,6 +10,7 @@
 </head>
 <body>
    <h1>Hello We are in HR Page</h1>
+   <a href="/hr/personPage">Goto Register Page</a>
    <h3>${username}</h3>
    
    <a href="/logout"> LOGOUT</a>

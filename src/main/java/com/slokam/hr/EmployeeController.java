@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class EmployeeController {
 
 	@RequestMapping("employee")
-	@PreAuthorize("hasRole('manager')")
+	//@PreAuthorize("hasRole('manager')")
 	public ModelAndView gotoEmployee(){
 		
 		return new ModelAndView();
