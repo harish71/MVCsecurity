@@ -30,7 +30,7 @@ public class SecConfiguration extends WebSecurityConfigurerAdapter {
 		//disable().
 		   http.csrf().and().
 		   authorizeRequests().
-		   antMatchers("/regisPage","/regis").permitAll().
+		   antMatchers("/regisPage","/regis","/showFormPage","/nextPageOne").permitAll().
 		   anyRequest().authenticated().and().
 		   formLogin().loginPage("/loginPage").
 		   loginProcessingUrl("/abc").

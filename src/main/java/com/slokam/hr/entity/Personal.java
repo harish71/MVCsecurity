@@ -17,7 +17,8 @@ public class Personal implements Serializable {
    @ManyToOne() 
 @JoinColumn(name="fkid12") 
    private MaritalStatus  maritalStatus;
-  private Date  marriageDate;
+   
+  //private Date  marriageDate;
    @ManyToOne() 
 @JoinColumn(name="fkid13") 
    private State  state;
@@ -63,13 +64,11 @@ public MaritalStatus getMaritalStatus() {
 public void setMaritalStatus(MaritalStatus maritalStatus) {
 		this.maritalStatus = maritalStatus;
 	}
-public Date getMarriageDate() {
-		return marriageDate;
-	}
-public void setMarriageDate(Date marriageDate) {
-		this.marriageDate = marriageDate;
-	}
-public State getState() {
+
+	/*
+	 * public Date getMarriageDate() { return marriageDate; } public void
+	 * setMarriageDate(Date marriageDate) { this.marriageDate = marriageDate; }
+	 */public State getState() {
 		return state;
 	}
 public void setState(State state) {
