@@ -3,14 +3,19 @@ package com.slokam.hr;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
 public class LoginController {
 
+	Logger logger = LoggerFactory.getLogger(LoginController.class);
+	
 	@Autowired
 	private ILoginService loginService;
 	
@@ -26,6 +31,11 @@ public class LoginController {
 	
 	@RequestMapping("regis")
 	public ModelAndView regis(UserDetailsImpl userDetails) {
+		  logger.trace("Entered into regis method.");
+		 
+		  logger.debug("Registration happening for:"+userDetails.getUsername());
+		  logger.debug("With the password:"+userDetails.getPassword());
+		  
 		 GrantedAuthorityImpl role = new GrantedAuthorityImpl();
 		 role.setId(2);
 		 Collection<GrantedAuthorityImpl> collection =
@@ -40,6 +50,8 @@ public class LoginController {
 		 // 1.set roles to userDetails
 		 // 2.save userDetails
 		 loginService.saveUser(userDetails);
+		 logger.info(userDetails.getUsername()+"::User registered successfully.");
+		logger.trace("EXit  from regis method."); 
 		return new ModelAndView("ourloginPage");
 	}
 }
