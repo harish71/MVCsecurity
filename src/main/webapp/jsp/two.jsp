@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <h1>TWO</h1>
+ <h1>CONGRATULATIONS</h1>
  <sec:csrfInput/>
 </body>
 </html>
