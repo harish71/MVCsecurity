@@ -46,7 +46,6 @@ public class LoginController {
 		 userDetails.setAccountNonLocked(true);
 		 userDetails.setEnabled(true);
 		 userDetails.setCredentialsNonExpired(true);
-		 
 		 // 1.set roles to userDetails
 		 // 2.save userDetails
 		 loginService.saveUser(userDetails);

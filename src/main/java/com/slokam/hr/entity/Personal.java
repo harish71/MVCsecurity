@@ -1,7 +1,11 @@
 package com.slokam.hr.entity; 
  import java.io.Serializable; 
- import javax.persistence.*; 
- import java.util.*; 
+ import javax.persistence.*;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.*;
+import java.util.regex.Pattern; 
 @Entity 
 public class Personal implements Serializable { 
 
@@ -17,7 +21,8 @@ public class Personal implements Serializable {
    @ManyToOne() 
 @JoinColumn(name="fkid12") 
    private MaritalStatus  maritalStatus;
-   
+
+@DateTimeFormat(pattern="yyyy-mm-dd") 
   private Date  marriageDate;
   
    @ManyToOne() 
