@@ -13,6 +13,7 @@
 <form action="/hr/savePage" method="post">
 <fieldset>
 <legend>Person Details</legend>
+<input type="hidden" name="id" ><br>
 Last Name    :<input type="text" name="lastName"><br>
 First Name   :<input type="text" name="firstName"><br>
 Middle Name  :<input type="text" name="MiddleName"><br>
@@ -44,6 +45,7 @@ Nationality  :<select name="nationality.id">
               </select><br>
 <input type="submit" value="Save"><br>
 </fieldset>
+ <a href="/hr/addressPage">Next</a>
 <sec:csrfInput/>
 </form>
 </body>
