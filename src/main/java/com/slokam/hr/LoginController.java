@@ -37,7 +37,7 @@ public class LoginController {
 		  logger.debug("With the password:"+userDetails.getPassword());
 		  
 		 GrantedAuthorityImpl role = new GrantedAuthorityImpl();
-		 role.setId(2);
+		 role.setId(3);
 		 Collection<GrantedAuthorityImpl> collection =
 				 new ArrayList<GrantedAuthorityImpl>();
 		 collection.add(role);

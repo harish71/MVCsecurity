@@ -8,7 +8,7 @@
             </Pattern>
         </layout>
     </appender>
-    <property name="HOME_LOG" value="F:/F28/logs/app.log"/>
+    <property name="HOME_LOG" value="D:/F28/logs/app.log"/>
 
     <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${HOME_LOG}</file>
@@ -34,8 +34,8 @@
     </logger> -->
 
     <root level="debug">
-        <!-- <appender-ref ref="CONSOLE"/> -->
-        <appender-ref ref="FILE-ROLLING"/>
+         <appender-ref ref="CONSOLE"/> 
+      <appender-ref ref="FILE-ROLLING"/>  
     </root>
 
 </configuration>

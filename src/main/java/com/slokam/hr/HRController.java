@@ -16,7 +16,7 @@ public class HRController {
 
 	 
 	 @RequestMapping("/goto")
-	 @PreAuthorize("hasRole('USER')")
+	 @PreAuthorize("hasRole('MANAGER')")
 	 public ModelAndView gotoHr() {
 		// String name = SecurityContextHolder.getContext().getAuthentication().getName();
 		
