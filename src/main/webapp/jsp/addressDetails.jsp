@@ -44,7 +44,7 @@ Address Type :<select name="type.id">
 
 <input type="submit" value="Save"><br>
 </fieldset>
- <a href="/hr/contactPage">Next</a>
+ <a href="/hr/contactPage?id=${personByid.id}">Next</a>
 <sec:csrfInput/>
 </form>
 

@@ -42,4 +42,10 @@ public class PersonalServiceImpl implements PersonalService {
 	public void remove(Personal todo) {
 		repo.delete(todo);
 	}
+
+	@Override
+	public void deleteByid(Integer id) {
+		repo.deleteById(id);
+		
+	}
 }

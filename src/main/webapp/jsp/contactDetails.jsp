@@ -16,7 +16,6 @@ Phone Number    :<input type="text" name="number"><br>
 Email   :<input type="text" name="email"><br>
 Landline Number  :<input type="text" name="landline"><br>
 Fax: <input type="text" name="fax"><br>
-<input type="hidden" name="${personID}"><br>
 <input type="submit" value="Save"><br>
 
 

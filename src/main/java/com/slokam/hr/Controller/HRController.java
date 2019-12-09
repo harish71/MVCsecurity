@@ -71,7 +71,7 @@ public class HRController {
 	@Autowired
 	private ContactDetailsService contactDetailsService;
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(HRController.class);
 
 	@RequestMapping("/goto")
 	@PreAuthorize("hasRole('ADMIN')")
@@ -192,5 +192,54 @@ public class HRController {
 
 		return mv;
 	}
+	@RequestMapping("/getAll")
+	@PreAuthorize("hasRole('ADMIN')")
+	public ModelAndView getAllPage() {
+		LOGGER.info("Started into getAllPage::");
+        List<Personal> persons=personService.getAll();
+       
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("personsattr",persons);
+		
+		mv.setViewName("personDetails");
+		LOGGER.info("Ended into getAllPage::");
 
+		return mv;
+	}
+	@RequestMapping("/getById")
+	@PreAuthorize("hasRole('ADMIN')")
+	public ModelAndView getById(Integer id) {
+		LOGGER.info("Started into getById::");
+     Personal person=  personService.getById(id);
+     List<Gender> genders = genderService.getAll();
+		List<State> states = stateService.getAll();
+		List<Country> country = countryService.getAll();
+		List<Religion> religion = religionService.getAll();
+		List<MaritalStatus> maritalStatus = maritalStatusService.getAll();
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("personByid",person);
+		mv.addObject("gendersAttr", genders);
+		mv.addObject("statesAttr", states);
+		mv.addObject("countryAttr", country);
+		mv.addObject("religionsAttr", religion);
+		mv.addObject("martialstatusAttr", maritalStatus);
+		mv.setViewName("personDetails");
+		LOGGER.info("Ended into getById::");
+
+		return mv;
+	}
+
+	@RequestMapping("/deleteperson")
+	@PreAuthorize("hasRole('ADMIN')")
+	public ModelAndView deletePerson(Integer id) {
+		LOGGER.info("Started into deletePerson::");
+        personService.deleteByid(id);;
+       
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("personDetails");
+		LOGGER.info("Ended into deletePerson::");
+
+		return mv;
+	}
 }

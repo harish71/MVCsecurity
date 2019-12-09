@@ -11,5 +11,7 @@ public interface PersonalService {
 	public Personal getById(Integer id);
 	public Personal save(Personal Personal);
 	public void remove(Personal Personal);
+	public void deleteByid(Integer id);
+	
 
 }
